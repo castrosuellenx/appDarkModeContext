@@ -1,11 +1,11 @@
 import React, {useContext} from 'react';
 import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {Theme} from '../context/Theme';
 import {colorsLight, colorsDark} from '../config/colors';
 
-export default function Options({optionDesc}) {
+export default function Options({iconName, optionDesc}) {
   const theme = useContext(Theme);
   const darkMode = theme.state.darkMode;
 
@@ -20,10 +20,12 @@ export default function Options({optionDesc}) {
               : {borderColor: colorsLight.border},
           ]}>
           <Icon
-            name="settings"
+            name={iconName}
             size={30}
             color={darkMode ? colorsDark.regular : colorsLight.regular}
+            style={styles.optionIcon}
           />
+
           <Text
             style={[
               styles.optionDesc,
@@ -45,11 +47,17 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
   },
   optionBox: {
+    flexDirection: 'row',
     borderBottomWidth: 1,
+    paddingVertical: '5%',
+    alignItems: 'center',
+  },
+  optionIcon: {
+    paddingLeft: '3%',
   },
   optionDesc: {
     fontSize: 18,
     fontFamily: 'GothamBook',
-    paddingVertical: '5%',
+    paddingLeft: '5%',
   },
 });
