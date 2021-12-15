@@ -70,6 +70,6 @@ const styles = StyleSheet.create({
     fontFamily: 'GothamBook',
     textAlign: 'center',
     marginTop: '1%',
-    marginBottom: '3%',
+    marginBottom: '5%',
   },
 });

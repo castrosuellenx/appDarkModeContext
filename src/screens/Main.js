@@ -27,7 +27,11 @@ export default function Main() {
           : {backgroundColor: colorsLight.background},
       ]}>
       <Avatar name="Tasun Prasad" accountLvl="Premium" />
-      <Options />
+      <Options optionDesc="Account" />
+      <Options optionDesc="Notifications" />
+      <Options optionDesc="Settings" />
+      <Options optionDesc="Help" />
+      <Options optionDesc="Logout" />
     </View>
   );
 }
