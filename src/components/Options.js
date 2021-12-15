@@ -21,7 +21,7 @@ export default function Options({iconName, optionDesc}) {
           ]}>
           <Icon
             name={iconName}
-            size={30}
+            size={28}
             color={darkMode ? colorsDark.regular : colorsLight.regular}
             style={styles.optionIcon}
           />
